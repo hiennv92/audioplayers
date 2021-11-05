@@ -1,7 +1,7 @@
 import '../audioplayers.dart';
 import 'api/log_level.dart';
 
-class Logger {
+class AudioLogger {
   static LogLevel _logLevel = LogLevel.ERROR;
 
   static LogLevel get logLevel => _logLevel;
@@ -14,7 +14,7 @@ class Logger {
     );
   }
 
-  Logger._() {
+  AudioLogger._() {
     throw UnimplementedError();
   }
 

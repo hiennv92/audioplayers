@@ -377,13 +377,13 @@ class AudioPlayer {
     try {
       _doHandlePlatformCall(call);
     } catch (ex) {
-      Logger.error('Unexpected error: $ex');
+      AudioLogger.error('Unexpected error: $ex');
     }
   }
 
   static Future<void> _doHandlePlatformCall(MethodCall call) async {
     final callArgs = call.arguments as Map<dynamic, dynamic>;
-    Logger.info('_platformCallHandler call ${call.method} $callArgs');
+    AudioLogger.info('_platformCallHandler call ${call.method} $callArgs');
 
     final playerId = callArgs['playerId'] as String;
     final player = players[playerId];
@@ -435,7 +435,7 @@ class AudioPlayer {
         player.notificationService.notifyPreviousTrack();
         break;
       default:
-        Logger.error('Unknown method ${call.method} ');
+        AudioLogger.error('Unknown method ${call.method} ');
     }
   }
 
