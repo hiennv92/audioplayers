@@ -118,10 +118,10 @@ public class SwiftAudioplayersPlugin: NSObject, FlutterPlugin {
                 result(FlutterMethodNotImplemented)
                 return
             }
-            if let handleKey = args["handleKey"] {
+            if let handleKey = args["handleKey"] as? [Any], let handle = handleKey.first as? Int64 {
                 Logger.info("calling start headless service %@", handleKey)
-                let handle = (handleKey as! [Any])[0]
-                handler.startHeadlessService(handle: (handle as! Int64))
+
+                handler.startHeadlessService(handle: handle)
             } else {
                 result(0)
             }
@@ -130,10 +130,10 @@ public class SwiftAudioplayersPlugin: NSObject, FlutterPlugin {
                 result(FlutterMethodNotImplemented)
                 return
             }
-            if let handleMonitorKey = args["handleMonitorKey"] {
+            if let handleMonitorKey = args["handleMonitorKey"] as? [Any], let handle = handleMonitorKey.first as? Int64 {
                 Logger.info("calling monitor notification %@", handleMonitorKey)
-                let handle = (handleMonitorKey as! [Any])[0]
-                handler.updateHandleMonitorKey(handle: handle as! Int64)
+
+                handler.updateHandleMonitorKey(handle: handle)
             } else {
                 result(0)
             }
