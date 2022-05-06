@@ -24,8 +24,8 @@ dependencies:
   audioplayers_platform_interface: ^1.0.0-rc.2
   audioplayers_android: ^1.0.0-rc.2
   audioplayers_darwin: ^1.0.0-rc.2
-  audioplayers_linux:
-    path: ../audioplayers_linux
+#  audioplayers_linux:
+#    path: ../audioplayers_linux
     # TODO Use when released:
     #audioplayers_linux: ^1.0.0-rc.2
   audioplayers_web: ^1.0.0-rc.2
