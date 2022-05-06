@@ -12,17 +12,16 @@ dependencies:
   provider: 5.0.0
 
 dev_dependencies:
-  # flutter_driver:
-  #  sdk: flutter
-  dart_code_metrics: ^4.2.1
+  integration_test:
+    sdk: flutter
+  flame_lint: 0.0.1
 
 flutter:
   uses-material-design: true
 
   assets:
-    - assets/audio.mp3
-    - assets/audio2.mp3
-    - assets/messenger.mp3
+    - assets/
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.14.0 <3.0.0"
+  flutter: ">=2.5.0"
