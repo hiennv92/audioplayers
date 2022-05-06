@@ -1,4 +1,15 @@
+## 1.0.0-rc.2
+
+ - Bump "audioplayers" to `1.0.0-rc.2`.
+
+## 1.0.0-rc.1
+
+ - First release after federation
+
 # Changelog
+
+## 0.20.2
+- Fix bug with inversed log levels
 
 ## 0.20.1
 - Fix enum parsing on release mode on android
