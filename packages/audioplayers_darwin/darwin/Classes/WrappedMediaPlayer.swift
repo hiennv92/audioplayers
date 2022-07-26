@@ -118,7 +118,7 @@ class WrappedMediaPlayer {
   }
 
   func seek(time: CMTime, completer: Completer? = nil) {
-    guard let currentItem = player.currentItem else {
+    guard let currentItem = player.currentItem, currentItem.status == .readyToPlay else {
       completer?()
       return
     }
