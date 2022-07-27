@@ -118,7 +118,7 @@ class WrappedMediaPlayer {
     }
     
     func seek(time: CMTime) {
-        guard let currentItem = player?.currentItem else {
+        guard let currentItem = player?.currentItem, currentItem.status == .readyToPlay else {
             return
         }
         // TODO(luan) currently when you seek, the play auto-unpuses. this should set a seekTo property, similar to what WrappedMediaPlayer
